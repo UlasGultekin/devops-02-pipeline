@@ -65,5 +65,13 @@ pipeline {
                 }
             }
         }
+         stage('Docker Image to Clean') {
+                    steps {
+
+                           //  sh 'docker image prune -f'
+                             bat 'docker image prune -f'
+
+                    }
+                }
     }
 }
